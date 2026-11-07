@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HeadphoneProfile",
+  "description": "Especificação de perfil paramétrico de equalização para fones de ouvido no Equalizer macOS",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "model",
+    "brand",
+    "targetCurve",
+    "bands"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUID único do perfil de equalização"
+    },
+    "name": {
+      "type": "string",
+      "description": "Nome descritivo completo ou título do preset"
+    },
+    "model": {
+      "type": "string",
+      "description": "Modelo comercial do fone (ex: WH-1000XM4)"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Marca fabricante (ex: Sony, KZ, Huawei)"
+    },
+    "targetCurve": {
+      "type": "string",
+      "description": "Curva alvo de resposta de referência (ex: Harman Over-Ear 2018)"
+    },
+    "preampGain": {
+      "type": "number",
+      "minimum": -30.0,
+      "maximum": 30.0,
+      "description": "Ganho de compensação global em decibéis para evitar clipping no processamento paramétrico"
+    },
+    "bands": {
+      "type": "array",
+      "description": "Lista de bandas paramétricas ordenadas por frequência",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "filterType",
+          "frequency",
+          "gain",
+          "qFactor",
+          "bandwidth"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "filterType": {
+            "type": "string",
+            "enum": [
+              "LOW_SHELF",
+              "PEAK",
+              "HIGH_SHELF",
+              "LOW_PASS",
+              "HIGH_PASS",
+              "BAND_PASS",
+              "NOTCH"
+            ]
+          },
+          "frequency": {
+            "type": "number",
+            "minimum": 20.0,
+            "maximum": 20000.0,
+            "description": "Frequência central do filtro em Hertz (Hz)"
+          },
+          "gain": {
+            "type": "number",
+            "minimum": -30.0,
+            "maximum": 30.0,
+            "description": "Ganho/atenuamento da banda em decibéis (dB)"
+          },
+          "qFactor": {
+            "type": "number",
+            "minimum": 0.1,
+            "maximum": 20.0,
+            "description": "Fator de qualidade (Q-Factor) do filtro"
+          },
+          "bandwidth": {
+            "type": "number",
+            "minimum": 0.05,
+            "maximum": 10.0,
+            "description": "Largura de banda em oitavas"
+          }
+        }
+      }
+    }
+  }
+}

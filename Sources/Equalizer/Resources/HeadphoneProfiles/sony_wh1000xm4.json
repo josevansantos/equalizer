@@ -1,0 +1,93 @@
+{
+  "id": "bb2871e9-5805-4b2f-b1bd-55b0f7adbad6",
+  "name": "Sony WH-1000XM4 (oratory1990 Harman)",
+  "model": "WH-1000XM4",
+  "brand": "Sony",
+  "targetCurve": "Harman Over-Ear 2018",
+  "preampGain": -5.6,
+  "bands": [
+    {
+      "id": "11111111-0000-0000-0000-000000000001",
+      "filterType": "LOW_SHELF",
+      "frequency": 105.0,
+      "gain": 5.5,
+      "qFactor": 0.71,
+      "bandwidth": 1.89
+    },
+    {
+      "id": "11111111-0000-0000-0000-000000000002",
+      "filterType": "LOW_SHELF",
+      "frequency": 210.0,
+      "gain": -4.5,
+      "qFactor": 0.71,
+      "bandwidth": 1.89
+    },
+    {
+      "id": "11111111-0000-0000-0000-000000000003",
+      "filterType": "PEAK",
+      "frequency": 1050.0,
+      "gain": -2.3,
+      "qFactor": 1.4,
+      "bandwidth": 1.01
+    },
+    {
+      "id": "11111111-0000-0000-0000-000000000004",
+      "filterType": "PEAK",
+      "frequency": 2300.0,
+      "gain": 3.2,
+      "qFactor": 2.0,
+      "bandwidth": 0.71
+    },
+    {
+      "id": "11111111-0000-0000-0000-000000000005",
+      "filterType": "PEAK",
+      "frequency": 3100.0,
+      "gain": -4.1,
+      "qFactor": 3.0,
+      "bandwidth": 0.48
+    },
+    {
+      "id": "11111111-0000-0000-0000-000000000006",
+      "filterType": "PEAK",
+      "frequency": 4800.0,
+      "gain": 2.5,
+      "qFactor": 4.0,
+      "bandwidth": 0.36
+    },
+    {
+      "id": "11111111-0000-0000-0000-000000000007",
+      "filterType": "PEAK",
+      "frequency": 5800.0,
+      "gain": -5.0,
+      "qFactor": 5.0,
+      "bandwidth": 0.29
+    },
+    {
+      "id": "11111111-0000-0000-0000-000000000008",
+      "filterType": "PEAK",
+      "frequency": 7500.0,
+      "gain": 3.8,
+      "qFactor": 4.5,
+      "bandwidth": 0.32
+    },
+    {
+      "id": "11111111-0000-0000-0000-000000000009",
+      "filterType": "PEAK",
+      "frequency": 9800.0,
+      "gain": -3.0,
+      "qFactor": 3.5,
+      "bandwidth": 0.41
+    },
+    {
+      "id": "11111111-0000-0000-0000-000000000010",
+      "filterType": "HIGH_SHELF",
+      "frequency": 12000.0,
+      "gain": -2.0,
+      "qFactor": 0.71,
+      "bandwidth": 1.89
+    }
+  ],
+  "description": "Perfil de equaliza\u00e7\u00e3o param\u00e9trica para o Sony WH-1000XM4 com ANC ativado, baseado na curva-alvo Harman Over-Ear 2018.",
+  "source": "oratory1990",
+  "isBuiltIn": true
+}
